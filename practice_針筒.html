@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .back {
+      width: 600px;
+      height: 80px;
+      border-radius: 10px;
+      border: 0.7px solid rgb(150, 150, 150);
+      background: linear-gradient(white 0%, lightgray 70%, white 100%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .back::before {
+      content: "";
+      width: 50px;
+      height: 120px;
+      border-radius: 10px;
+      border: 0.7px solid rgb(150, 150, 150);
+      background: linear-gradient(white 0%, lightgray 70%, white 100%);
+
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .back::after {
+      content: "";
+      width: 100px;
+      height: 2px;
+      border-radius: 10px;
+      background: gray;
+
+      position: absolute;
+      right: -100px;
+      top: 50%;
+      transform: translate(0, 50%);
+    }
+
+    .main {
+      width: 450px;
+      height: 120px;
+      border: 0.7px solid rgb(180, 180, 180);
+      background: linear-gradient(white 0%, lightgray 70%, white 100%);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .text {
+      color: gray;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+
+    .main::before {
+      content: "";
+      width: 225px;
+      height: 120px;
+      border: 0.7px solid rgba(180, 180, 180);
+      background: linear-gradient(rgb(255, 255, 155) 0%, lightgray 70%, rgb(255, 255, 155) 100%);
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+
+    .ruler {
+      height: 20px;
+      width: 450px;
+      background-image:
+        repeating-linear-gradient(to right, rgba(180, 180, 180) 0, rgba(180, 180, 180)0.05em, transparent 0, transparent 1em);
+      background-repeat: no-repeat;
+      border-top: 1px solid rgba(180, 180, 180);
+      position: absolute;
+      right: 75px;
+      top: -20px;
+    }
+
+    .ruler::before {
+      content: "";
+      width: 50px;
+      height: 120px;
+      background: black;
+      position: absolute;
+      right: 50%;
+      top: 0;
+      transform: translate(50%, 0)
+    }
+  </style>
+</head>
+
+<body>
+  <div class="back">
+    <div class="main">
+      <div class="text">Made In Taiwan</div>
+    </div>
+    <div class="ruler"></div>
+  </div>
+
+</body>
+
+</html>

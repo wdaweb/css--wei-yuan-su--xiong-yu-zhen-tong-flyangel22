@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 身體 */
+    .circle_body {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-color: black;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /* 左邊耳朵 */
+    .circle_body::before {
+      content: "";
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      border-radius: 50%;
+
+      top: 0;
+      left: 10%;
+      position: absolute;
+    }
+
+    /* 右邊耳朵*/
+    .circle_body::after {
+      content: "";
+      width: 50px;
+      height: 50px;
+      background-color: black;
+      border-radius: 50%;
+
+      top: 0;
+      right: 10%;
+      position: absolute;
+    }
+
+    /*腮紅左*/
+    .face-left {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      left: -10%;
+      top: 40%;
+    }
+
+    /* 眼球左*/
+    .face-left::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      right: -60px;
+      top: -50px;
+      z-index: 2;
+    }
+
+    /* 耳白左*/
+    .face-left::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      right: -20px;
+      top: -110px;
+      z-index: 1;
+    }
+
+    /*腮紅右*/
+    .face-right {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: red;
+      position: absolute;
+      right: -10%;
+      top: 40%;
+    }
+
+    /* 眼球右*/
+    .face-right::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      left: -60px;
+      top: -50px;
+      z-index: 1;
+    }
+
+    /* 耳白左*/
+    .face-right::before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      left: -20px;
+      top: -110px;
+      z-index: 2;
+    }
+
+
+    /*眼白左*/
+    .eyes {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      left: 20%;
+      top: 20%;
+    }
+
+    /*眼白右*/
+    .eyes::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      right: -200%;
+      top: 0;
+    }
+
+    /* 白嘴巴 */
+    .mouse {
+      width: 120px;
+      height: 80px;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    /*鼻子*/
+    .mouse::after {
+      content: "";
+      width: 30px;
+      height: 20px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, -10%);
+    }
+
+    /*黑嘴巴*/
+    .mouse::before {
+      content: "";
+      width: 80px;
+      height: 30px;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -60%);
+    }
+
+    .texture {
+      width: 40px;
+      height: 40px;
+      background: white;
+      position: absolute;
+      left: 50%;
+      bottom: 10%;
+      transform: skewX(-50deg);
+    }
+
+    .texture::after {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background: white;
+      position: absolute;
+      left: -110%;
+      bottom: 0;
+      transform: skewX(245deg);
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="circle_body">
+    <div class="mouse"></div>
+    <div class="face-left"></div>
+    <div class="face-right"></div>
+    <div class="eyes"></div>
+    <div class="texture"></div>
+  </div>
+
+</body>
+
+</html>
